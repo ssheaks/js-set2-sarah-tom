@@ -1,24 +1,21 @@
-let str = "craft block argon meter bells brown croon droop";
-let array = str.split(" ");
+'use strict';
 
-function crackingTheCode(word) {
-    let decode = "";
-    for (i = 0; i < array.length; i++) {
-      if (word [0] === "a") {
-        return word [1];
-    } else if (word [0] === "b") {
-        return word [2];
-    } else if (word [0] === 'c') {
-        return word [3];
-    } else if (word [0] === 'd') {
-        return word [4];
+function crackingTheCode(message) {
+  let result = '';
+  let array = message.split(' ');
+  for (i = 0; i < array.length; i++) {
+    if (array[i] [0] === 'a') {
+      result += array[i][1];
+    } else if (array[i][0] === 'b') {
+      result +=  array[i][2];
+    } else if (array[i][0] === 'c') {
+      result += array[i][3];
+    } else if (array[i][0] === 'd') {
+      result += array[i][4];
     } else {
-        return " ";
+      result += ' ';
     }      
-  } return decode;
+  } return result;
 }
-
-crackingTheCode(array);
-
-console.log(decode);
-
+  
+console.log(crackingTheCode('craft block argon meter bells brown croon droop'));
