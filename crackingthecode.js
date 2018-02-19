@@ -3,7 +3,7 @@
 function crackingTheCode(message) {
   let result = '';
   let array = message.split(' ');
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] [0] === 'a') {
       result += array[i][1];
     } else if (array[i][0] === 'b') {
