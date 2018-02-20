@@ -19,3 +19,18 @@ function crackingTheCode(message) {
 }
   
 console.log(crackingTheCode('craft block argon meter bells brown croon droop'));
+
+//condensed version
+const decode = function (word) {
+  if (word[0].charCodeAt() > 100) return ' ';
+  return word[word[0].charCodeAt() - 96];
+};
+
+const decodeWords = function (words) {
+  return words
+    .split(' ')
+    .map(decode)
+    .join('');
+};
+
+console.log(decodeWords('craft block argon meter bells brown croon droop'));
